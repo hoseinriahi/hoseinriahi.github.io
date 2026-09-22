@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Hosein Riahi — Robotics, CNC, SolidWorks, Programming, Web Design and Technology.">
+<meta name="theme-color" content="#070b14">
+<title>Hosein Riahi | Technology & Engineering</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Tahoma,sans-serif;background:#070b14;color:#eef6ff;line-height:1.7}
+a{text-decoration:none;color:inherit}
+header{position:sticky;top:0;z-index:20;background:rgba(7,11,20,.92);backdrop-filter:blur(12px);border-bottom:1px solid #1d2a3d}
+.nav{max-width:1150px;margin:auto;padding:15px 20px;display:flex;align-items:center;gap:22px}
+.logo{font-size:22px;font-weight:800;white-space:nowrap}
+.logo span,.hero span{color:#54ddff}
+nav{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;flex:1}
+nav a,.lang{padding:8px 12px;border:1px solid #24364d;border-radius:10px;background:#0d1421;color:#dcecff;font-size:13px;cursor:pointer}
+nav a:hover,.lang:hover,.btn:hover{border-color:#54ddff;box-shadow:0 0 16px rgba(84,221,255,.15)}
+.lang{font-family:inherit}
+main{max-width:1150px;margin:auto;padding:30px 20px 70px}
+.hero{min-height:390px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px solid #1b2a3c;border-radius:25px;background:radial-gradient(circle at 50% 20%,#122b43 0,#0a111e 42%,#070b14 75%);padding:55px 20px;margin-bottom:28px}
+.badge{display:inline-block;border:1px solid #2c5167;background:#0d1a27;color:#78e5ff;border-radius:30px;padding:7px 15px;margin-bottom:18px;font-size:13px}
+.hero h1{font-size:clamp(42px,8vw,78px);line-height:1.1;margin-bottom:15px}
+.hero p{color:#a9bdd1;font-size:18px}
+.section{padding:18px 0;scroll-margin-top:90px}
+.card{background:linear-gradient(145deg,#0e1724,#0a101a);border:1px solid #1d2d41;border-radius:20px;padding:27px;box-shadow:0 10px 35px rgba(0,0,0,.2)}
+.card h2{font-size:26px;margin-bottom:8px}
+.muted{color:#9fb1c4}
+.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:16px}
+.tag{display:inline-block;padding:7px 12px;border:1px solid #28415b;border-radius:999px;background:#0c1725;color:#bcefff;font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
+.item{padding:18px;border:1px solid #203247;border-radius:15px;background:#0b1420;transition:.2s}
+.item:hover{transform:translateY(-2px);border-color:#54ddff}
+.item h3{margin-bottom:5px}
+.about{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.achievements{display:grid;gap:10px;margin-top:15px}
+.achievement{padding:12px 14px;border-radius:12px;background:#0b1420;border:1px solid #203247}
+.btn{display:inline-block;margin-top:14px;padding:10px 16px;border:1px solid #2b5068;border-radius:11px;background:#0d1927;color:#dff8ff}
+footer{text-align:center;border-top:1px solid #1d2a3d;color:#8194a8;padding:25px 15px}
+#aiBtn{position:fixed;right:18px;bottom:18px;z-index:50;border:1px solid #54ddff;background:#0b1825;color:#dffaff;border-radius:999px;padding:11px 17px;font-weight:700;cursor:pointer;box-shadow:0 0 24px rgba(84,221,255,.16)}
+#aiBox{display:none;position:fixed;right:18px;bottom:72px;width:min(350px,calc(100vw - 36px));z-index:50;background:#09111c;border:1px solid #28445d;border-radius:18px;overflow:hidden;box-shadow:0 15px 50px rgba(0,0,0,.45)}
+.aiHead{padding:12px 15px;background:#0d1a29;border-bottom:1px solid #203247;font-weight:700}
+#messages{height:250px;overflow:auto;padding:12px}
+.msg{padding:9px 11px;border-radius:11px;margin:7px 0;max-width:88%;font-size:14px}
+.msg.user{margin-left:auto;background:#153047}
+.msg.bot{background:#111e2d}
+.aiInput{display:flex;gap:7px;padding:10px;border-top:1px solid #203247}
+.aiInput input{min-width:0;flex:1;padding:10px;border-radius:10px;border:1px solid #28415a;background:#08101a;color:#fff;outline:none}
+.aiInput button{border:1px solid #54ddff;background:#0e2635;color:#fff;border-radius:10px;padding:0 13px;cursor:pointer}
+[dir=rtl] body{text-align:right}
+[dir=rtl] nav{direction:rtl}
+@media(max-width:800px){.nav{flex-wrap:wrap}.logo{width:100%;text-align:center}nav{order:3;width:100%}.about{grid-template-columns:1fr}.hero{min-height:330px}}
+</style>
+</head>
+<body>
+<header>
+<div class="nav">
+<a class="logo" href="#home">Hosein <span>Riahi</span></a>
+<nav>
+<a href="#robotics">Robotics</a><a href="#cnc">CNC</a><a href="#solidworks">SolidWorks</a><a href="#code">Code</a><a href="#web">Web Design</a><a href="#projects">Projects</a><a href="#about">About Me</a><a href="#contact">Contact</a>
+</nav>
+<button class="lang" id="langBtn" onclick="toggleLang()">فارسی</button>
+</div>
+</header>
+
+<main id="home">
+<section class="hero">
+<div class="badge">Technology • Robotics • Engineering • Code</div>
+<h1>Hosein <span>Riahi</span></h1>
+<p>Robotics, engineering, programming and technology projects.</p>
+</section>
+
+<section class="section" id="robotics">
+<div class="card">
+<h2>🤖 Robotics</h2><p class="muted">Robotics projects and competitions.</p>
+<div class="grid">
+<div class="item"><h3>🥋 Sumo</h3><p class="muted">Sumo robot projects and competitions.</p></div>
+<div class="item"><h3>⚽ Footballist</h3><p class="muted">Footballist robotics projects.</p></div>
+<div class="item"><h3>⚔️ Warrior</h3><p class="muted">Warrior robot projects.</p></div>
+<div class="item"><h3>〰️ Line Follower</h3><p class="muted">Line-following robots.</p></div>
+<div class="item"><h3>🤖 Mission Impossible</h3><p class="muted">Robot design and construction.</p></div>
+<div class="item"><h3>➕ Other Leagues</h3><p class="muted">Other robotics leagues and projects.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="cnc"><div class="card"><h2>⚙️ CNC</h2><p class="muted">CNC design, manufacturing and engineering projects.</p></div></section>
+
+<section class="section" id="solidworks">
+<div class="card"><h2>🧊 SolidWorks</h2><p class="muted">CAD and mechanical design projects.</p>
+<div class="tags"><span class="tag">3D Design</span><span class="tag">Assembly</span><span class="tag">Drawing</span><span class="tag">Sheet Metal</span></div></div>
+</section>
+
+<section class="section" id="code">
+<div class="card"><h2>💻 Code</h2><p class="muted">Programming and electronics-related development.</p>
+<div class="tags"><span class="tag">Python</span><span class="tag">Arduino</span><span class="tag">SRC</span><span class="tag">InnoBot</span><span class="tag">Altium Designer</span><span class="tag">Other Projects</span></div></div>
+</section>
+
+<section class="section" id="web">
+<div class="card"><h2>🌐 Web Design</h2><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Web Projects</span></div></div>
+</section>
+
+<section class="section" id="projects"><div class="card"><h2>🛠️ Projects</h2><p class="muted">Selected robotics, engineering and programming projects.</p></div></section>
+
+<section class="section" id="about">
+<div class="card">
+<h2 id="pageTitle">About Me</h2>
+<p id="intro">I am Hosein Riahi, a 14-year-old technology and robotics enthusiast. I work on designing, building and programming robots and enjoy taking part in robotics and technology competitions and events.</p>
+<br>
+<h2 id="achTitle">Achievements</h2>
+<div class="achievements" id="achievements"></div>
+<br>
+<h2 id="interestTitle">My Interests</h2><div class="tags" id="interests"></div>
+<br>
+<h2 id="goalTitle">My Goal</h2><p id="goalText"></p>
+</div>
+</section>
+
+<section class="section" id="contact">
+<div class="card"><h2>📩 Contact Us</h2><p class="muted">For contact and project inquiries:</p>
+<a class="btn" href="tel:09167263608">📞 09167263608</a></div>
+</section>
+</main>
+
+<footer>© 2026 Hosein Riahi — Technology & Engineering</footer>
+
+<button id="aiBtn" onclick="toggleAI()">✨ Hosein AI</button>
+<div id="aiBox">
+<div class="aiHead">✨ Hosein AI</div>
+<div id="messages"><div class="msg bot">Ask me about Hosein Riahi or the sections of this website.</div></div>
+<div class="aiInput"><input id="aiInput" placeholder="Ask about the site..." onkeydown="if(event.key==='Enter')askAI()"><button onclick="askAI()">Send</button></div>
+</div>
+
+<script>
+const translations={
+en:{
+title:"About Me",
+intro:"I am Hosein Riahi, a 14-year-old technology and robotics enthusiast. I work on designing, building and programming robots and enjoy taking part in robotics and technology competitions and events.",
+ach:"Achievements",interests:"My Interests",goal:"My Goal",
+goalText:"My goal is to keep learning, designing and building new projects and to continue developing my skills in robotics and technology.",
+tags:["Robotics","Programming","SolidWorks","CNC","Electronics","Arduino","SRC","InnoBot","Web Design"],
+items:[
+"🏆 FIRA Cup Champion 2025",
+"🏆 FIRA Cup Champion 2025 — Super Team",
+"🌍 Qualified for the FIRA Cup World Championship in South Korea",
+"🥇 First provincial place in the Footballist League",
+"🏅 Technical achievement at the Iranian Robotics Competition",
+"🏆 Two additional awards in robotics competitions",
+"🇹🇷 Qualified for a robotics competition in Turkey",
+"🥇 First provincial place in the Khwarizmi Young Talents Festival",
+"🌐 Participation in the international Robonit competition",
+"🇮🇷 Participation in Iran's Technology Olympics",
+"📺 Participation in events with live television broadcast"
+]},
+fa:{
+title:"درباره من",
+intro:"من حسین ریاحی هستم، ۱۴ ساله و در زمینه رباتیک و فناوری فعالیت می‌کنم. به طراحی، ساخت و برنامه‌نویسی ربات‌ها علاقه دارم و در مسابقات و رویدادهای مختلف رباتیک و فناوری شرکت کرده‌ام.",
+ach:"دستاوردها",interests:"علاقه‌مندی‌های من",goal:"هدف من",
+goalText:"هدف من ادامه یادگیری، طراحی و ساخت پروژه‌های جدید و پیشرفت در زمینه رباتیک و فناوری است.",
+tags:["رباتیک","برنامه‌نویسی","SolidWorks","CNC","الکترونیک","Arduino","SRC","InnoBot","طراحی سایت"],
+items:[
+"🏆 قهرمان مسابقات FIRA Cup 2025",
+"🏆 قهرمان مسابقات FIRA Cup 2025 در بخش Super Team",
+"🌍 کسب سهمیه مسابقات جهانی FIRA Cup در کره جنوبی",
+"🥇 مقام اول استانی در لیگ فوتبالیست",
+"🏅 کسب مقام فنی در مسابقات رباتیک ایران",
+"🏆 کسب دو مقام دیگر در مسابقات رباتیک",
+"🇹🇷 کسب سهمیه مسابقات ترکیه",
+"🥇 مقام اول استانی در جشنواره نوجوانان خوارزمی",
+"🌐 شرکت در مسابقات بین‌المللی Robonit",
+"🇮🇷 شرکت در المپیک فناوری ایران",
+"📺 حضور در رویدادهای دارای پخش مستقیم تلویزیونی"
+]}};
+
+let lang="en";
+function render(){
+ const t=translations[lang];
+ document.documentElement.lang=lang;
+ document.documentElement.dir=lang==="fa"?"rtl":"ltr";
+ document.getElementById("pageTitle").textContent=t.title;
+ document.getElementById("intro").textContent=t.intro;
+ document.getElementById("achTitle").textContent=t.ach;
+ document.getElementById("interestTitle").textContent=t.interests;
+ document.getElementById("goalTitle").textContent=t.goal;
+ document.getElementById("goalText").textContent=t.goalText;
+ document.getElementById("achievements").innerHTML=t.items.map(x=>`<div class="achievement">${x}</div>`).join("");
+ document.getElementById("interests").innerHTML=t.tags.map(x=>`<span class="tag">${x}</span>`).join("");
+ document.getElementById("langBtn").textContent=lang==="en"?"فارسی":"English";
+}
+function toggleLang(){lang=lang==="en"?"fa":"en";render()}
+
+const knowledge=[
+["حسین ریاحی","حسین ریاحی ۱۴ ساله و فعال در زمینه رباتیک و فناوری است."],
+["hosein riahi","Hosein Riahi is a 14-year-old robotics and technology enthusiast."],
+["رباتیک","لیگ‌های رباتیک سایت شامل سومو، فوتبالیست، جنگجو، مسیریاب و Mission Impossible است."],
+["robotics","The Robotics section includes Sumo, Footballist, Warrior, Line Follower, Mission Impossible and Other Leagues."],
+["لیگ","لیگ‌های رباتیک شامل سومو، فوتبالیست، جنگجو، مسیریاب، Mission Impossible و سایر لیگ‌ها است."],
+["league","The robotics leagues include Sumo, Footballist, Warrior, Line Follower, Mission Impossible and Other Leagues."],
+["کد","بخش Code شامل Python، Arduino، SRC، InnoBot و Altium Designer است."],
+["code","The Code section includes Python, Arduino, SRC, InnoBot and Altium Designer."],
+["سالیدورکس","بخش SolidWorks شامل 3D Design، Assembly، Drawing و Sheet Metal است."],
+["solidworks","The SolidWorks section includes 3D Design, Assembly, Drawing and Sheet Metal."],
+["تماس","شماره تماس حسین در بخش Contact Us قرار دارد."],
+["contact","Hosein's contact phone number is available in the Contact Us section."]
+];
+
+function askAI(){
+ const input=document.getElementById("aiInput"),q=input.value.trim();
+ if(!q)return;
+ addMsg(q,"user");input.value="";
+ const lower=q.toLowerCase();
+ let ans=lang==="fa"?"من فقط درباره اطلاعات و بخش‌های این سایت پاسخ می‌دهم.":"I can answer questions about the information and sections of this website.";
+ for(const [key,val] of knowledge){
+  if(lower.includes(key.toLowerCase())){
+   ans=val;break;
+  }
+ }
+ setTimeout(()=>addMsg(ans,"bot"),180);
+}
+function addMsg(text,type){
+ const d=document.createElement("div");d.className="msg "+type;d.textContent=text;
+ document.getElementById("messages").appendChild(d);
+ document.getElementById("messages").scrollTop=99999;
+}
+function toggleAI(){
+ const b=document.getElementById("aiBox");
+ b.style.display=b.style.display==="block"?"none":"block";
+}
+render();
+</script>
+</body>
+</html>
